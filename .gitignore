@@ -1,0 +1,53 @@
+# Ignore Visual Studio temporary files, build results, and
+# other VS specific files
+
+## Ignore Visual Studio temporary files, build results, and
+## other VS specific files
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+bin/
+obj/
+
+# .NET directories
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Package directories
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Backup files
+*.bak
+*.old
+*.backup
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Docker Support
+.docker/
+*.container
+docker-compose.yml
+docker-compose.override.yml
