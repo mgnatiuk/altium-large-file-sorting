@@ -14,10 +14,6 @@
 ### LineComparer.cs
 - **Purpose**: Contains the logic for comparing lines and sorting them. This class implements the custom comparison logic required for sorting the lines based on specified criteria.
 
-### Properties/AssemblyInfo.cs
-- **Purpose**: Contains assembly metadata, such as version information and other attributes related to the assembly.
-
-
 
 ## Projects
 
