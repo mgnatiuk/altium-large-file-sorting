@@ -2,44 +2,21 @@
 
 ## Structure of the Sorting Application
 
-### 1. **Main Method**
-- **Responsibility**: Orchestrates the flow of the program.
-- **Key Tasks**:
-  - Starts and stops the stopwatch to measure execution time.
-  - Calls the necessary methods to process the input file, sort chunks, and merge them.
-  - Prints summary information, including the total chunks created, total lines processed, and the final execution time.
+### Program.cs
+- **Purpose**: Entry point of the application. It initializes the sorting process by reading input parameters and invoking the `FileSorter`.
 
-### 2. **FileProcessor**
-- **Responsibility**: Handles reading, splitting, and sorting the input file into chunks.
-- **Key Tasks**:
-  - Reads the input file line by line.
-  - Splits the lines into manageable chunks based on a specified size.
-  - Sorts each chunk using the `ChunkSorter`.
+### FileSorter.cs
+- **Purpose**: Manages the overall sorting process of the large file. This includes reading the input file, splitting it into manageable chunks, and coordinating the sorting and merging of these chunks.
 
-### 3. **ChunkSorter**
-- **Responsibility**: Sorts each chunk and saves it to disk.
-- **Key Tasks**:
-  - Sorts the lines within a chunk.
-  - Saves the sorted chunk to a temporary file.
+### TemporaryFileManager.cs
+- **Purpose**: Handles the creation and management of temporary files. This class is responsible for sorting the individual chunks, saving them to disk, and cleaning up after the sorting process is complete.
 
-### 4. **ChunkMerger**
-- **Responsibility**: Merges sorted chunks into the final output file.
-- **Key Tasks**:
-  - Reads the sorted chunk files.
-  - Merges them into a single output file using a priority queue to maintain order.
+### LineComparer.cs
+- **Purpose**: Contains the logic for comparing lines and sorting them. This class implements the custom comparison logic required for sorting the lines based on specified criteria.
 
-### 5. **LineComparer**
-- **Responsibility**: Contains logic for comparing lines.
-- **Key Tasks**:
-  - Extracts numeric values from lines for comparison.
-  - Compares string portions of lines.
-  - Determines the ordering based on both numeric and string comparisons.
+### Properties/AssemblyInfo.cs
+- **Purpose**: Contains assembly metadata, such as version information and other attributes related to the assembly.
 
-### 6. **TempFileManager**
-- **Responsibility**: Cleans up temporary chunk files after processing.
-- **Key Tasks**:
-  - Deletes temporary chunk files.
-  - Removes the temporary directory used for storage during the sorting process.
 
 
 ## Projects
